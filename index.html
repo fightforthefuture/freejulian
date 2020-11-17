@@ -8,21 +8,495 @@
 	<meta property="og:image" content="https://s3.fightforthefuture.org/images/freeprogress/1100-ed0e16af0d264f11e9ea86329c54a3daf598923e.jpg">
 	<meta property="og:site_name" content="Fight for the Future">
 	<meta property="og:type" content="website">
-        <style type="text/css">
-            body, html
-            {
-                margin: 0; padding: 0; height: 100%; overflow: hidden;
-            }
+    <style type="text/css">
+      body {
+        font-family: 'Montserrat', sans-serif!important;
+        color:#4E4E4E;
+        margin: 0;
+      }
+      
+      h1, h2, h3, h4, h5 {
+        font-family: 'Montserrat', sans-serif!important;
+      }
+      div:first-of-type {background-color: #fff;
+      }
+      footer div:first-of-type {background-color: #0E1B42;}
+      .entry-title { 
+        font-size: 4rem!important;
+        line-height: 4.5rem!important;
+        
+      }
+            #can_sidebar h4:after {
+        content: 'Take a stand with us';
+        visibility: visible;
+        display: block;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      .gen_name {display:none;
+      }
+      #can_sidebar h4 {
+        visibility: hidden;
+        display: block;
+        font-size: 28px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      #can_sidebar h4.overridden {
+        visibility: visible;
+      }
+      #can_sidebar h4.overridden:after {
+        display: none;
+      }
+      
+      #action_info {display:none!important;}
+      .action_target {display:none;}
+      #petition-box {
+        display:none;
+      }
 
-            #content
-            {
-                position:absolute; left: 0; right: 0; bottom: 0; top: 0px; 
-            }
-        </style>
-    </head>
-    <body>
-        <div id="content">
-            <iframe width="100%" height="100%" frameborder="0" src="https://actionnetwork.org/petitions/breaking-wikileaks-founders-internet-cut-current-status-unknown" />
+      .action_description p {color:#303c5b;}
+      
+      .petition main {
+        margin: 5rem auto 2rem!important;
+      }
+      
+      main.blue-one-column h2::after {
+        content: ''!important;
+      }
+      
+      #can_sidebar {
+        width: 35%!important;
+        float: right;
+        background-color: rgb(22, 43, 67)!important;
+        padding: 3rem;
+        box-sizing: border-box;
+        color: #fff;
+      }
+      
+      #can_main_col {
+        width: 60%!important;
+        float: left;
+      }
+      
+      #action_welcome_message_inner {
+        border: 1px solid #E8E8E8;
+        padding: 9px;
+        color: #162b43;
+      }
+      #can_embed_form.can_768 #can_sidebar {
+    padding: 3rem;
+}      
+      .action_letter {    display: none;}
+      #gen_header {
+        padding: 0;
+        background-color: #ffffff; 
+        text-align: center;
+      }
+      .action_sidebar {
+            background-color: transparent!important;
+      }
+
+      @media only screen and (max-width: 768px) {
+        #can_main_col {
+          width: 100%!important;
+        }     
+        #can_sidebar {
+          width: 100%!important;
+        }
+      }
+      
+      .gen_wrapper {
+        padding: 40px 20px;
+        width: 1160px;
+        max-width: 100%;
+        margin: auto;
+      }
+      
+      .gen_wrapper #can_embed_form input[type="submit"],
+      .can_embed-html #can_embed_form input[type="submit"],
+      .gen_wrapper #can_embed_form .button,
+      .can_embed-html #can_embed_form .button,
+      .gen_wrapper #donate_auto_modal input[type="submit"],
+      .can_embed-html #donate_auto_modal input[type="submit"],
+      .gen_wrapper #donate_auto_modal .button,
+      .can_embed-html #donate_auto_modal .button {
+        background-color:#f5315f; 
+      }
+      
+      .gen_wrapper #can_embed_form input[type="submit"]:hover,
+      .can_embed-html #can_embed_form input[type="submit"]:hover,
+      .gen_wrapper #can_embed_form .button:hover,
+      .can_embed-html #can_embed_form .button:hover,
+      .gen_wrapper #donate_auto_modal input[type="submit"]:hover,
+      .can_embed-html #donate_auto_modal input[type="submit"]:hover,
+      .gen_wrapper #donate_auto_modal .button:hover, 
+      .can_embed-html #donate_auto_modal .button:hover {
+        background-color:#f5315f;  
+      }
+      
+      .gen_wrapper #can_embed_form .action_status_running_total,
+      .can_embed-html #can_embed_form .action_status_running_total,
+      .gen_wrapper .gen_name,
+      .gen_wrapper a,
+      #can_fundraising_widget a {
+        color:#f5315f;
+        text-decoration: none;
+      }
+      
+      .gen_wrapper a:hover,
+      #can_fundraising_widget a:hover {
+        color:#f5315f;
+        opacity: .7;
+        text-decoration: none;
+      }
+      
+      #can_embed_form input[type="submit"], #can_embed_form .button, #donate_auto_modal input[type="submit"], #donate_auto_modal .button {
+        font-size:2.5rem!important;
+      }
+
+      .clearFix { position: relative; }
+      #can_embed_form { position: relative; }
+      #can_sidebar { margin-top: 40px; }
+      @media only screen and (min-width: 769px) {
+            #can_embed_form.can_768 #can_sidebar.sticky { float: none; }
+            #can_sidebar.sticky { margin-top: 0px; position: fixed; top: 65px; left: 50%; width: 329px !important; margin-left: 141px; }
+      }
+      
+    </style>
+    <link rel="icon" type="image/png" href="https://www.fightforthefuture.org/favicon.ico">
+<link rel="stylesheet" type="text/css" href="https://s3.fightforthefuture.org/css/petitions.css?1473544842660">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<meta content=" Wikileaks is reporting that their founder Julian Assange's internet connection &quot;has been intentionally severed by a state party.&quot;" name="description">
+<meta content="BREAKING: Wikileaks founder's internet cut, current status unknown" property="og:title">
+<meta content=" Wikileaks is reporting that their founder Julian Assange's internet connection &quot;has been intentionally severed by a state party.&quot;" property="og:description">
+<meta content="http://www.freejulian.org" property="og:url">
+<meta content="https://can2-prod.s3.amazonaws.com/share_options/facebook_images/000/021/583/original/ecuador-says-it-will-cooperate-with-sweden-over-the-questioning-of-julian-assange-in-its-london-embassy1.jpg" property="og:image">
+<meta content="238823876266270" property="og:fb:app_id">
+<meta content="BREAKING: Wikileaks founder's internet cut, current status unknown" name="action_title"><title>BREAKING: Wikileaks founder's internet cut, current status unknown</title><meta content="@theactionnet" property="twitter:site"><meta content="summary_large_image" property="twitter:card"><link rel="alternate" type="application/json+oembed" href="https://actionnetwork.org/oembed?url=https%3A%2F%2Factionnetwork.org%2Fpetitions%2Fbreaking-wikileaks-founders-internet-cut-current-status-unknown&amp;format=json"><link rel="alternate" type="text/xml+oembed" href="https://actionnetwork.org/oembed?url=https%3A%2F%2Factionnetwork.org%2Fpetitions%2Fbreaking-wikileaks-founders-internet-cut-current-status-unknown&amp;format=xml"></head>
+    <body class=" petition" data-components="petitions stickybar " data-gr-c-s-loaded="true">
+        <header class="stickybar blue-one-column" style="top: -5rem;">
+<span class="stickybar-fftf-logo">
+Fight for the Future
+</span>
+<ul class="stickybar-share-donate">
+<li class="stickybar-share-links">
+<a href="javascript:FreeProgress.share()" class="stickybar-facebook-share">
+facebook
+</a>
+<a href="javascript:FreeProgress.tweet()" class="stickybar-twitter-share">
+Twitter
+</a>
+</li>
+<li class="stickybar-donate">
+<a href="https://donate.fightforthefuture.org?amount=5&amp;frequency=just-once&amp;tag=petition_wrapper">
+Donate $5
+</a>
+</li>
+</ul>
+<a class="stickybar-take-action" href="#can_sidebar">
+Take action
+</a>
+</header>
+
+<main class="blue-one-column">
+<section class="petition-box" id="petition-box">
+<article class="petition-text">
+</article>
+</section>
+<link href="https://actionnetwork.org/css/style-embed-whitelabel-v3.css" rel="stylesheet" type="text/css">
+<script src="https://actionnetwork.org/widgets/v3/petition/breaking-wikileaks-founders-internet-cut-current-status-unknown?format=js&amp;referrer=&amp;source=&amp;style=full&amp;css=whitelabel"></script><script src="https://actionnetwork.org/widgets/v3/petition/breaking-wikileaks-founders-internet-cut-current-status-unknown?format=js&amp;referrer=&amp;source=&amp;style=full&amp;css=whitelabel&amp;js_inner=true"></script>
+<div id="can-petition-area-breaking-wikileaks-founders-internet-cut-current-status-unknown" style="width: "><div class="can_embed v3  petition petition_full full">
+
+
+
+  <div id="can_embed_form" class="clearfix can_float can_768">
+    <div class="clearfix">
+
+      <div id="can_main_col">
+
+
+        <h2 class="entry-title js-entry-title">
+          BREAKING: Wikileaks founder's internet cut, current status unknown
+        </h2>
+        <h4 class="action_target js-action_target">
+          <span class="graytext">Target:</span> President Barack Obama
+        </h4>
+        
+        
+  <img alt="Ecuador-says-it-will-cooperate-with-sweden-over-the-questioning-of-julian-assange-in-its-london-embassy1" class="main_action_image" src="https://can2-prod.s3.amazonaws.com/petitions/photos/000/036/337/original/ecuador-says-it-will-cooperate-with-sweden-over-the-questioning-of-julian-assange-in-its-london-embassy1.jpg">
+  
+  
+    
+  
+
+
+        
+        <div class="action_description clearfix">
+          <p>Wikileaks is <a href="https://twitter.com/wikileaks/status/787889195507417088"><strong>reporting</strong></a> that their founder Julian Assange's internet connection "has been intentionally severed by a state party. We have activated the appropriate contingency plans."
+</p>
+<p>Assange, who has been seeking asylum in the Ecuadorian Embassy in London for the past four years, has been at the center of debate as Wikileaks has continued to publish secret emails and documents exposing various government officials for corruption and wrongdoing, most recently the Podesta Emails.
+</p>
+<p>Regardless of how you feel about Assange, Wikileaks, or what they choose to release, everyone should be frightened by what appears to be an aggressive government action attempting to silence free speech and suppress important work for transparency and accountability.
+</p>
+<p><strong>The public deserves to know what is happening to Julian Assange. Right now. This affects all of us, and the future of our democracy. Sign the petition, and share this to sound the alarm.</strong><br>
+</p>
+<p>--
+</p>
+<p><strong id="petition-cta">Sign the petition:</strong><br><em>"Dear President Barack Obama: </em><em>Wikileaks plays an important function in our democracy. The public deserves to know what is happening with Julian Assange. We call on you to work with world leaders to immediately restore his Internet connection and stop any further harassment or interference with Wikileaks reporting and free speech."</em><br>
+</p><p><img src="https://can2-prod.s3.amazonaws.com/uploads/data/000/055/799/original/Screenshot_2016-10-17_at_9.22.56_AM.png"></p>
         </div>
+              
+              <div id="action_info">
+  <div id="action_info_inner" class="clearfix flex mb40">
+      
+    
+
+<div class="action_owner_box single-action_owner_box">
+  <div class="action_owner_title action_sponsor_title"><h5>Sponsored by</h5></div>
+  <div class="action_owner_wrap action_sponsor_wrap">
+    <div class="action_owner clearfix">
+      <a href="https://actionnetwork.org/groups/fight-for-the-future" target="_blank">
+        <img alt="Vdvlbhfg" class="action_author_avatar avatar" src="https://can2-prod.s3.amazonaws.com/groups/photos/000/013/162/thumb/VdvlbHFg.png">
+      </a>
+      <div class="action_info_right">
+        <div class="action_info_user js-action_info_user">
+          <a href="https://actionnetwork.org/groups/fight-for-the-future" target="_blank">Fight for the Future</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+      
+    
+
+  </div>
+</div>  
+              
+        <div class="action_letter">
+                <p>
+
+                  To:
+                  President Barack Obama
+                  
+                <br>
+                  From:
+                    Meredith Laverty
+                </p>
+                <div class="action_description"><p>"Wikileaks plays an important function in our democracy. The public deserves to know what is happening with Julian Assange. We call on you to work with world leaders to immediately restore his Internet connection and stop any further harassment or interference with Wikileaks reporting and free speech."</p>
+              </div>
+        </div>
+      </div>
+
+      <div id="can_sidebar" class="">
+      
+
+      
+
+        <div class="action_sidebar">
+          <h4 class="overridden">Sign the petition:</h4>
+              
+<form accept-charset="UTF-8" class="new_signature" id="new_signature" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="hBRhrNTgDW7A9DMmGHtYLfgbScAEF8RehX+0x/tBV14="></div>
+<input type="hidden" name="version" value="v3">
+<input id="redirect" name="redirect" type="hidden" value="">
+
+<div id="action_welcome_message">
+  <div id="action_welcome_message_inner" class="clearfix">
+    <div class="left">
+      <div>Welcome back, Meredith!</div>
+      <div>
+        <small>
+          Not Meredith?
+        <a href="https://actionnetwork.org/petitions/breaking-wikileaks-founders-internet-cut-current-status-unknown?clear_id=true&amp;referrer=&amp;source=" data-ajax-redirect="https://actionnetwork.org/widgets/v3/petition/breaking-wikileaks-founders-internet-cut-current-status-unknown?clear_id=true&amp;reload=true&amp;style=full&amp;clear_id=true&amp;referrer=&amp;source=" id="log-out" rel="nofollow" target="_blank">Click here</a>.
+        </small>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <li class="form_builder_output js-form_builder_output">
+
+
+
+
+
+
+
+
+
+</li>
+  
+  <input type="hidden" value="US" class="js-form-country">
+
+
+
+<div class="floatlabel-wrapper "><label for="form-comments" class="floatlabel-label floatlabel-label-inactive">Comments</label><textarea cols="40" id="form-comments" name="signature[message_to_target]" placeholder="Comments" rows="20" class="floatlabel-input"></textarea></div>
+
+
+<input id="auth_hash" name="auth_hash" type="hidden" value="32ed647cdeac6f4496cfbbdc2113806c">
+
+
+
+<input class="" name="commit" type="submit" value="Add Your Name">
+<img src="https://actionnetwork.org/images/spinner8.png" class="ajax-loading" alt="Loading">
+
+<li id="error_message" class="js-error_message"></li>
+
+<!--
+  @sharing_card_lists is an intance of SharingCardLists, a presenter inside app/presenters
+  resnponsible for building a list of subscription lists.
+-->
+<li id="d_sharing" class="js-d_sharing">
+  <ul>
+      <li>
+          You may receive email updates from
+          <em>Fight for the Future,</em>
+          the sponsor of this petition.
+      </li>
+
+    <li><a id="edit_d_sharing_opts" class="js-edit_d_sharing_opts">Edit Subscription Preferences</a><a id="edit_d_sharing_opts-close" class="js-edit_d_sharing_opts-close">Close Preferences</a></li>
+    <li id="d_sharing_opts" class="js-d_sharing_opts">
+      <ul>
+          <li>
+            <label>
+              
+                <input type="checkbox" name="subscription[group]" value="13162" id="name_optin1" checked="checked">
+                <input type="hidden" name="subscription[sub_group_id]" value="13162">
+                Opt in to email updates from Fight for the Future
+              
+            </label>
+          </li>
+          
+
+          
+
+
+        <input type="hidden" name="subscription[http_referer]" value="www.freejulian.org">
+        <input id="subscription_source" name="subscription[source]" type="hidden" value="">
+      </ul>
+    </li>
+  </ul>
+</li>
+
+
+
+<input class="js-tag_list" id="signature_tag_list" name="signature[tag_list]" type="hidden">
+
+
+
+</form>
+              
+
+        </div>
+      </div>
+    </div>
+    <div id="logo_wrap">
+      <a href="https://actionnetwork.org">
+        <img src="https://actionnetwork.org/images/logo_sm.png" alt="Action Network" target="_blank">
+      </a>
+    </div>
+  </div>
+</div>
+
+</div>
+<noscript>
+<p>A version of this action that uses less javacript and may be usable for those who don't use javascript is available at <a href="https://actionnetwork.org/petitions/breaking-wikileaks-founders-internet-cut-current-status-unknown?nowrapper=true&referrer=&source=">https://actionnetwork.org/petitions/breaking-wikileaks-founders-internet-cut-current-status-unknown?nowrapper=true&referrer=&source=&oneclick=</a></p>
+</noscript>
+</main>
+
+<footer class="action-network-footer blue-one-column">
+<p class="an-footer-cta">Help us spread the word:</p>
+<section class="share-this-button-links">
+<a class="share-this-fb" href="javascript:FreeProgress.share()">
+Share this
+</a>
+<a class="share-this-tw" href="javascript:FreeProgress.tweet()">
+Tweet this
+</a>
+<a class="share-this-donate" href="https://donate.fightforthefuture.org?amount=5&amp;frequency=just-once&amp;tag=petitions">
+Donate $5
+</a>
+</section>
+<section class="footer-meta-links">
+<div class="an-footer-meta">
+<p>Built by:</p>
+<a href="http://fightforthefuture.org" class="an-footer-logo">
+Fight for the Future
+</a>
+</div>
+<div class="an-footer-info">
+<p>
+For press inquiries, please contact us at:<br>
+<a href="tel:+1-978-852-6457">978-852-6457</a>
+or <a href="tel:+1-617-690-9547">617-690-9547</a>
+or <a href="mailto:press@fightforthefuture.org">press@fightforthefuture.org</a>
+</p>
+<p>
+For all other inquiries, contact:<br>
+<a href="mailto:team@fightforthefuture.org">team@fightforthefuture.org</a>
+</p>
+</div>
+</section>
+</footer>
+<script type="text/javascript" src="https://fftf.io/js/client.js"></script>
+<script type="text/javascript" src="https://s3.fightforthefuture.org/js/smoothscroll.min.js?1473544842669"></script>
+<script type="text/javascript" src="https://s3.fightforthefuture.org/js/core.js?1473544842669"></script>
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  
+  ga('create', 'UA-26576645-1', 'www.fightforthefuture.org');
+  ga('send', 'pageview');
+  
+</script>
+<script type="text/javascript">
+    document.addEventListener("can_embed_loaded", function(){
+        
+        var petitionCTA = document.getElementById("petition-cta"),
+            overrideCTA = document.querySelector(".action_sidebar h4");
+        if (petitionCTA && overrideCTA) {
+            overrideCTA.textContent = petitionCTA.textContent;
+            overrideCTA.className = 'overridden';
+        }
+       
+    });
+    document.addEventListener("can_embed_submitted", function(){
+        var tweetLink = document.querySelector('.share_button.share-twitter'),
+            shareLink = document.querySelector('.share_button.share-facebook');
+        if (tweetLink) {
+            tweetLink.onclick = '';
+            tweetLink.href = 'javascript:FreeProgress.tweet();';
+        }
+        if (shareLink) {
+            shareLink.onclick = '';
+            shareLink.href = 'javascript:FreeProgress.share();';
+        }
+    });
+</script>
+<script type="text/javascript">
+var managePetitionSticky = function() {
+      var sidebar = document.getElementById("can_sidebar");
+      if (!sidebar)
+            return false;
+      if (window.scrollY > 25)
+            sidebar.classList.add('sticky');
+      else
+            sidebar.classList.remove('sticky');
+}
+window.addEventListener('scroll', managePetitionSticky);
+window.addEventListener('resize', managePetitionSticky);
+</script>
     </body>
 </html>
